@@ -23,7 +23,7 @@ class EnhancedWebSecurityScanner:
         self.session = requests.Session()
     
     def scan(self):
-        """Main scanning function covering OWASP Top 10"""
+        """scanning function covering OWASP Top 10"""
         print(f"Starting comprehensive security scan for {self.target_url}")
         
         # A01:2021 - Broken Access Control
@@ -59,7 +59,7 @@ class EnhancedWebSecurityScanner:
         self.generate_report()
 
     def check_broken_access_control(self):
-        """A01:2021 - Broken Access Control"""
+        """Broken Access Control"""
         # Check for directory traversal
         traversal_paths = ["../../../etc/passwd", "..\\..\\..\\windows\\win.ini"]
         for path in traversal_paths:
@@ -91,7 +91,7 @@ class EnhancedWebSecurityScanner:
                 pass
 
     def check_crypto_failures(self):
-        """A02:2021 - Cryptographic Failures"""
+        """Cryptographic Failures"""
         try:
             response = self.session.get(self.target_url)
             
@@ -121,7 +121,7 @@ class EnhancedWebSecurityScanner:
             pass
 
     def check_injection_vulnerabilities(self):
-        """A03:2021 - Injection"""
+        """Injection"""
         # SQL Injection
         sql_payloads = ["' OR '1'='1", "1; DROP TABLE users", "1 UNION SELECT null,null,null--"]
         for payload in sql_payloads:
@@ -168,7 +168,7 @@ class EnhancedWebSecurityScanner:
                 pass
 
     def check_insecure_design(self):
-        """A04:2021 - Insecure Design"""
+        """Insecure Design"""
         try:
             # Check for common insecure design patterns
             
@@ -201,7 +201,7 @@ class EnhancedWebSecurityScanner:
             pass
 
     def check_security_misconfig(self):
-        """A05:2021 - Security Misconfiguration"""
+        """Security Misconfiguration"""
         try:
             # Check for exposed configuration files
             common_configs = [
@@ -253,7 +253,7 @@ class EnhancedWebSecurityScanner:
             pass
 
     def check_vulnerable_components(self):
-        """A06:2021 - Vulnerable Components"""
+        """Vulnerable Components"""
         try:
             response = self.session.get(self.target_url)
             
@@ -289,7 +289,7 @@ class EnhancedWebSecurityScanner:
             pass
 
     def check_auth_failures(self):
-        """A07:2021 - Authentication Failures"""
+        """Authentication Failures"""
         try:
             # Check password policies
             weak_passwords = ['password123', '123456', 'qwerty']
@@ -326,7 +326,7 @@ class EnhancedWebSecurityScanner:
             pass
 
     def check_integrity_failures(self):
-        """A08:2021 - Software and Data Integrity Failures"""
+        """Software and Data Integrity Failures"""
         try:
             # Check for insecure deserialization
             payload = base64.b64encode(b'{"user": "admin"}').decode()
@@ -356,7 +356,7 @@ class EnhancedWebSecurityScanner:
             pass
 
     def check_logging_failures(self):
-        """A09:2021 - Security Logging and Monitoring Failures"""
+        """Security Logging and Monitoring Failures"""
         try:
             # Check for error exposure
             response = self.session.get(f"{self.target_url}/error")
@@ -384,7 +384,7 @@ class EnhancedWebSecurityScanner:
             pass
 
     def check_ssrf(self):
-        """A10:2021 - Server-Side Request Forgery"""
+        """Server-Side Request Forgery"""
         try:
             # Test for basic SSRF
             ssrf_urls = [
