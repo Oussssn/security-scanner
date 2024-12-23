@@ -1,9 +1,11 @@
+
 # Web Security Scanner
 
 A Python-based automated security scanner for web applications that performs basic vulnerability assessments and generates detailed reports.
 
-## Features
+---
 
+## Features
 - **SSL/TLS Analysis**
   - Certificate validation
   - Expiration checks
@@ -27,42 +29,61 @@ A Python-based automated security scanner for web applications that performs bas
   - Detailed findings with recommendations
   - Summary statistics
 
+---
+
 ## Requirements
-python 3.x
-requests
+- Python 3.x
+- `requests` library
+
+---
 
 ## Installation
 
 1. Clone this repository:
-```bash
-git clone https://github.com/yourusername/web-security-scanner.git
-cd web-security-scanner
+   ```bash
+   git clone https://github.com/Oussssn/security-scanner.git
+   cd security-scanner
+   ```
 
-pip install requests
+2. Install dependencies:
+   ```bash
+   pip install requests
+   ```
 
+---
 
 ## Usage
--Run the scanner:
-'python scanner.py'
 
--Enter the target URL when prompted:
-Enter target URL to scan (e.g., https://example.com):
+1. Run the scanner:
+   ```bash
+   python security-scanner.py
+   ```
 
--The scanner will perform all checks and generate a report in security_report.json (in the same folder)
+2. Enter the target URL when prompted:
+   ```
+   Enter target URL to scan (e.g., https://example.com):
+   ```
+
+3. The scanner will perform all checks and generate a report:
+   - Report file: `security_report.json` (in the same folder).
+
+---
 
 ## Limitations
--Basic vulnerability checks only
--False positives may occur
--No authentication support
--Limited to HTTP/HTTPS protocols
--No recursive scanning
+- Basic vulnerability checks only.
+- False positives may occur.
+- No authentication support.
+- Limited to HTTP/HTTPS protocols.
+- No recursive scanning.
+
+---
 
 ## Contributing
--Fork the repository
--Create your feature branch
--Commit your changes
--Push to the branch
--Create a new Pull Request
+
+Contributions are welcome! Feel free to fork the repository and use it for your own purposes.
+
+---
 
 ## Disclaimer
+
 This tool is provided as-is without any warranties. Users are responsible for ensuring they have appropriate permissions before conducting security scans.
