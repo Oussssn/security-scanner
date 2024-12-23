@@ -1,0 +1,145 @@
+{
+    "scan_target": "https://juice-shop.herokuapp.com/#/",
+    "scan_time": "2024-12-23 17:04:17",
+    "findings": [
+        {
+            "type": "Broken Access Control",
+            "severity": "High",
+            "description": "Potential IDOR vulnerability detected",
+            "recommendation": "Implement proper authorization checks"
+        },
+        {
+            "type": "Broken Access Control",
+            "severity": "High",
+            "description": "Potential IDOR vulnerability detected",
+            "recommendation": "Implement proper authorization checks"
+        },
+        {
+            "type": "Broken Access Control",
+            "severity": "High",
+            "description": "Potential IDOR vulnerability detected",
+            "recommendation": "Implement proper authorization checks"
+        },
+        {
+            "type": "NoSQL Injection",
+            "severity": "High",
+            "description": "Potential NoSQL Injection vulnerability",
+            "recommendation": "Implement proper input validation for NoSQL queries"
+        },
+        {
+            "type": "NoSQL Injection",
+            "severity": "High",
+            "description": "Potential NoSQL Injection vulnerability",
+            "recommendation": "Implement proper input validation for NoSQL queries"
+        },
+        {
+            "type": "Insecure Design",
+            "severity": "Medium",
+            "description": "No rate limiting detected",
+            "recommendation": "Implement rate limiting to prevent abuse"
+        },
+        {
+            "type": "Insecure Design",
+            "severity": "Medium",
+            "description": "Sensitive operations without confirmation",
+            "recommendation": "Implement confirmation steps for sensitive operations"
+        },
+        {
+            "type": "Security Misconfiguration",
+            "severity": "High",
+            "description": "Exposed configuration file: /config.php",
+            "recommendation": "Restrict access to configuration files"
+        },
+        {
+            "type": "Security Misconfiguration",
+            "severity": "High",
+            "description": "Exposed configuration file: /wp-config.php",
+            "recommendation": "Restrict access to configuration files"
+        },
+        {
+            "type": "Security Misconfiguration",
+            "severity": "High",
+            "description": "Exposed configuration file: /config.yml",
+            "recommendation": "Restrict access to configuration files"
+        },
+        {
+            "type": "Security Misconfiguration",
+            "severity": "High",
+            "description": "Exposed configuration file: /.env",
+            "recommendation": "Restrict access to configuration files"
+        },
+        {
+            "type": "Security Misconfiguration",
+            "severity": "High",
+            "description": "Exposed configuration file: /web.config",
+            "recommendation": "Restrict access to configuration files"
+        },
+        {
+            "type": "Security Misconfiguration",
+            "severity": "High",
+            "description": "Exposed configuration file: /robots.txt",
+            "recommendation": "Restrict access to configuration files"
+        },
+        {
+            "type": "Security Misconfiguration",
+            "severity": "High",
+            "description": "Exposed configuration file: /sitemap.xml",
+            "recommendation": "Restrict access to configuration files"
+        },
+        {
+            "type": "Authentication Failures",
+            "severity": "High",
+            "description": "Weak password policy",
+            "recommendation": "Implement strong password requirements"
+        },
+        {
+            "type": "Authentication Failures",
+            "severity": "High",
+            "description": "Missing brute force protection",
+            "recommendation": "Implement account lockout and rate limiting"
+        },
+        {
+            "type": "Integrity Failures",
+            "severity": "High",
+            "description": "Unsafe file upload detected",
+            "recommendation": "Implement proper file upload validation"
+        },
+        {
+            "type": "Logging Failures",
+            "severity": "Medium",
+            "description": "Debug endpoint exposed: /debug",
+            "recommendation": "Disable or protect debug endpoints"
+        },
+        {
+            "type": "Logging Failures",
+            "severity": "Medium",
+            "description": "Debug endpoint exposed: /trace",
+            "recommendation": "Disable or protect debug endpoints"
+        },
+        {
+            "type": "Logging Failures",
+            "severity": "Medium",
+            "description": "Debug endpoint exposed: /status",
+            "recommendation": "Disable or protect debug endpoints"
+        },
+        {
+            "type": "Logging Failures",
+            "severity": "Medium",
+            "description": "Debug endpoint exposed: /health",
+            "recommendation": "Disable or protect debug endpoints"
+        },
+        {
+            "type": "SSRF",
+            "severity": "High",
+            "description": "Potential SSRF vulnerability detected",
+            "recommendation": "Implement URL validation and whitelist"
+        }
+    ],
+    "summary": {
+        "critical": 0,
+        "high": 16,
+        "medium": 6,
+        "low": 0,
+        "info": 0
+    }
+}
